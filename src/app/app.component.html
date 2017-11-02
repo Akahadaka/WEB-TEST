@@ -1,44 +1,84 @@
 <!-- Toolbar -->
-<mat-toolbar>
-    <span>DREAMSHARE</span>
-</mat-toolbar>
+<div class="toolbar">
+    <mat-toolbar [style.background]="'rgba(0, 0, 0, '+toolbarAlpha+')'">
+        <span>DREAMSHARE</span>
+    </mat-toolbar>
+</div>
 
 <!-- Header -->
 <div class="header" [style.height]="bgHeight + 'px'">
     <div class="header-background"></div>
     <div class="header-text">SHARE YOUR HOLIDAY DREAM</div>
 </div>
+
 <!-- Cards -->
-<div class="title-text">Meet a partner for your best holiday</div>
+<div class="partners">
+    <div class="title-text">Meet a partner for your best holiday</div>
+    <mat-card>
+        <img mat-card-avatar class="partner-image-avatar" src="../assets/images/partner1.jpg" alt="Bradley Hunter">
+        <img mat-card-sm-image class="partner-image-feature" src="../assets/images/music.svg">
+        <mat-card-title-group>
+            <mat-card-title>Bradley Hunter</mat-card-title>
+            <mat-card-subtitle>Based in Chicago. I love playing tennis and loud music.</mat-card-subtitle>
+        </mat-card-title-group>
+    </mat-card>
+
+    <mat-card>
+        <img mat-card-avatar class="partner-image-avatar" src="../assets/images/partner2.jpg" alt="Marie Bennett">
+        <mat-card-title-group>
+            <mat-card-title>Marie Bennett</mat-card-title>
+            <mat-card-subtitle>Currently living in Colorado. Lover or art, languages and travelling.</mat-card-subtitle>
+        </mat-card-title-group>
+    </mat-card>
+
+    <mat-card>
+        <img mat-card-avatar class="partner-image-avatar" src="../assets/images/partner3.jpg" alt="Diana Wells">
+        <mat-card-title-group>
+            <mat-card-title>Diana Wells</mat-card-title>
+            <mat-card-subtitle>Living in Athens, Greece. I love black and white classics, chillout music and green tea.</mat-card-subtitle>
+        </mat-card-title-group>
+    </mat-card>
+
+    <mat-card>
+        <img mat-card-avatar class="partner-image-avatar" src="../assets/images/partner4.jpg" alt="Christopher Pierce">
+        <mat-card-title-group>
+            <mat-card-title>Christopher Pierce</mat-card-title>
+            <mat-card-subtitle>Star Wars fanatic. I have a persistent enthusiasm to create new things.</mat-card-subtitle>
+        </mat-card-title-group>
+    </mat-card>
+</div>
+
 <!-- Grid -->
-<div class="title-text">Discover holiday activity ideas</div>
+<div class="blocks">
+    <div class="title-text">Discover holiday activity ideas</div>
+</div>
 
 <!-- Footer -->
 <div class="footer">
     <span>DREAMSHARE</span>
 
     <div class="footer-col-1">
-        <ul>
-            <li><span class="footer-col-title">Company</span></li>
-            <li>About</li>
-            <li></li>
-            <li></li>
-        </ul>
+        <mat-nav-list>
+            <mat-list-item><span class="footer-col-title">Company</span></mat-list-item>
+            <mat-list-item>About</mat-list-item>
+            <mat-list-item></mat-list-item>
+            <mat-list-item></mat-list-item>
+        </mat-nav-list>
     </div>
     <div class="footer-col-2">
-        <ul>
-            <li><span class="footer-col-title">Activities</span></li>
-            <li>Sports</li>
-            <li></li>
-            <li></li>
-        </ul>
+        <mat-nav-list>
+            <mat-list-item><span class="footer-col-title">Activities</span></mat-list-item>
+            <mat-list-item>Sports</mat-list-item>
+            <mat-list-item></mat-list-item>
+            <mat-list-item></mat-list-item>
+        </mat-nav-list>
     </div>
     <div class="footer-col-3">
-        <ul>
-            <li><span class="footer-col-title">Contact Us</span></li>
-            <li>Tel: (000) 000-0000</li>
-            <li>Email: dreamshare@email.com</li>
-        </ul>
+        <mat-nav-list>
+            <mat-list-item><span class="footer-col-title">Contact Us</span></mat-list-item>
+            <mat-list-item>Tel: (000) 000-0000</mat-list-item>
+            <mat-list-item>Email: dreamshare@email.com</mat-list-item>
+        </mat-nav-list>
     </div>
 
 </div>

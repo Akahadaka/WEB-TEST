@@ -2,6 +2,17 @@
 
 $background-image: url("../assets/images/headerBackground.jpg");
 
+.toolbar {
+
+    color: $color-image-text;
+
+    mat-toolbar {
+        position: fixed;
+        background-color: transparent;
+        z-index: 99;
+    }
+}
+
 .header {
 
     position: relative;
@@ -36,15 +47,65 @@ $background-image: url("../assets/images/headerBackground.jpg");
 
 .title-text {
     color: $color-title-text;
+    font-size: 1.3em;
     font-weight: 700;
+    text-align: center;
+    margin: 50px auto 20px;
+}
+
+.partners {
+
+    width: 90%;
+    margin: auto;
+
+
+    mat-card {
+        float:left;
+        width: 20%;
+        box-shadow: none;
+        text-align: center;
+        padding: 18px;
+        font-size: 0.8em;
+
+        .partner-image-avatar {
+            width: 100px;
+            height: 100px;
+        }
+
+        .partner-image-feature {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            padding: 5px;
+            border-radius: 50%;
+            border: 4px solid $color-image-text;
+            top: 90px;
+            right: 50px;
+            background-color: $color-feature-music;
+        }
+
+        mat-card-title {
+            margin-top: 10px;
+            font-weight: 700;
+        }
+
+        mat-card-subtitle {
+            font-size: 0.8em;
+            color: $color-subtitle-text;
+        }
+    }
+}
+
+.blocks {
+    clear: both;
 }
 
 .footer {
 
     font-size: 0.8em;
-    color: $color-footer-text;
+    color: $color-subtitle-text;
     font-weight: 300;
-    
+
     .footer-col-title {
         color: $color-title-text;
         font-weight: 700;
