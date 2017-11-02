@@ -1,0 +1,22 @@
+$background-image: "../assets/images/headerBackground.jpg";
+
+.header {
+
+    height: 100%;
+
+    .header-background {
+        //display: block;
+        //width: 100%;
+        height: 100%;
+        background-image: url($background-image);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center top;
+        background-attachment: fixed;
+    }
+
+    .header-text {
+
+    }
+
+}
