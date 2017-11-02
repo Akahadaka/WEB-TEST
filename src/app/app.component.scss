@@ -1,14 +1,15 @@
-$background-image: "../assets/images/headerBackground.jpg";
+@import "~../assets/css/colors.scss";
+
+$background-image: url("../assets/images/headerBackground.jpg");
 
 .header {
 
+    position: relative;
     height: 100%;
 
     .header-background {
-        //display: block;
-        //width: 100%;
         height: 100%;
-        background-image: url($background-image);
+        background-image: $background-image;
         background-repeat: no-repeat;
         background-size: 100% auto;
         background-position: center top;
@@ -16,7 +17,36 @@ $background-image: "../assets/images/headerBackground.jpg";
     }
 
     .header-text {
-
+        width: 275px;
+        height: 75px;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border: 1px solid $color-image-text;
+        color: $color-image-text;
+        font-size: 2em;
+        text-align: center;
+        font-weight:700;
     }
 
+}
+
+.title-text {
+    color: $color-title-text;
+    font-weight: 700;
+}
+
+.footer {
+
+    font-size: 0.8em;
+    color: $color-footer-text;
+    font-weight: 300;
+    
+    .footer-col-title {
+        color: $color-title-text;
+        font-weight: 700;
+    }
 }
