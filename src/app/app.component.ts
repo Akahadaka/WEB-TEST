@@ -10,12 +10,13 @@ export class AppComponent {
 
     headerImageRatio: number = 700/1440;
     backgroundHeight: number = window.innerWidth * this.headerImageRatio;
-    toolbarAlpha: number = 0;
+    toolbarAlpha: number = 1;
 
     /**
      * 
      */
     constructor() {
+
     }
     
     /**
