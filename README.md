@@ -1,19 +1,19 @@
-# WebTest
+# Frontend Web Test Instructions
 
-##FONTS:
+##USE FONTS:
 
 https://fonts.google.com/specimen/Montserrat
 
 https://fonts.google.com/specimen/Roboto
 
-##COLOURS:
+##USE COLOURS:
 
-Pink: #FF4E50
-Green: #18D4CA
-Orange: #FFA710
-Purple: #667DF3
-Dark Grey (Headings): #444444
-Grey: #666666
+* Pink: #FF4E50
+* Green: #18D4CA
+* Orange: #FFA710
+* Purple: #667DF3
+* Dark Grey (Headings): #444444
+* Grey: #666666
 
 You have one week in which to return the test for review.
 
@@ -21,6 +21,8 @@ Test rules – these are vague for a reason. Yes you must build a fully responsi
 * Use your tools of choice to build a FULLY RESPONSIVE web page for Dreamshare using the assets provided – NO BOOTSTRAP.
 * In the assets zip you will find a preview folder, therein is a screenshot of what the webpage is supposed to look like.
 * Once you are done, zip all your source files into a .zip file and come back to this page.
+
+![Alt text](/page-1-dreamshare_desktop.png?raw=true "Design to be implemented")
 
 <details>
 
