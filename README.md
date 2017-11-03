@@ -22,7 +22,7 @@ Test rules – these are vague for a reason. Yes you must build a fully responsi
 * In the assets zip you will find a preview folder, therein is a screenshot of what the webpage is supposed to look like.
 * Once you are done, zip all your source files into a .zip file and come back to this page.
 
-![Alt text](/page-1-dreamshare_desktop.png?raw=true "Design to be implemented")
+![Alt text](/page-1-dreamshare_desktop.jpg?raw=true "Design to be implemented")
 
 <details>
 
