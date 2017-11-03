@@ -1,22 +1,39 @@
 <!-- Toolbar -->
 <div class="toolbar">
     <mat-toolbar [style.background]="'rgba(0, 0, 0, '+toolbarAlpha+')'">
-        <span>DREAMSHARE</span>
+
+        <div><span>DREAMSHARE</span></div>
+        
+        <div class="toolbar-nav">
+            <span>Activities</span>
+            <span>Partners</span>
+            <span>Blog</span>
+            <span>Contact</span>
+            <span>Log in</span>
+            <span class="toolbar-button"><button mat-button>Sign up</button></span>
+        </div>
+        
     </mat-toolbar>
 </div>
 
 <!-- Header -->
-<div class="header" [style.height]="bgHeight + 'px'">
+<div class="header" [style.height]="backgroundHeight + 'px'">
     <div class="header-background"></div>
-    <div class="header-text">SHARE YOUR HOLIDAY DREAM</div>
+    <div class="header-text">
+        <span class="header-text-title">SHARE YOUR<br>HOLIDAY DREAM</span>
+        <span class="header-text-subtitle">And find the perfect partner to fulfill it</span>
+        <span class="header-button"><button mat-button>Find your holiday partner</button></span>
+    </div>
 </div>
 
 <!-- Cards -->
 <div class="partners">
     <div class="title-text">Meet a partner for your best holiday</div>
     <mat-card>
-        <img mat-card-avatar class="partner-image-avatar" src="../assets/images/partner1.jpg" alt="Bradley Hunter">
-        <img mat-card-sm-image class="partner-image-feature" src="../assets/images/music.svg">
+        <div class="partner-image">
+            <img mat-card-avatar class="partner-image-avatar" src="../assets/images/partner1.jpg" alt="Bradley Hunter">
+            <img mat-card-sm-image class="partner-image-music" src="../assets/images/music.svg">
+        </div>
         <mat-card-title-group>
             <mat-card-title>Bradley Hunter</mat-card-title>
             <mat-card-subtitle>Based in Chicago. I love playing tennis and loud music.</mat-card-subtitle>
@@ -24,7 +41,10 @@
     </mat-card>
 
     <mat-card>
-        <img mat-card-avatar class="partner-image-avatar" src="../assets/images/partner2.jpg" alt="Marie Bennett">
+        <div class="partner-image">
+            <img mat-card-avatar class="partner-image-avatar" src="../assets/images/partner2.jpg" alt="Marie Bennett">
+            <img mat-card-sm-image class="partner-image-brush" src="../assets/images/brush.svg">
+        </div>
         <mat-card-title-group>
             <mat-card-title>Marie Bennett</mat-card-title>
             <mat-card-subtitle>Currently living in Colorado. Lover or art, languages and travelling.</mat-card-subtitle>
@@ -32,7 +52,10 @@
     </mat-card>
 
     <mat-card>
-        <img mat-card-avatar class="partner-image-avatar" src="../assets/images/partner3.jpg" alt="Diana Wells">
+        <div class="partner-image">
+            <img mat-card-avatar class="partner-image-avatar" src="../assets/images/partner3.jpg" alt="Diana Wells">
+            <img mat-card-sm-image class="partner-image-camera" src="../assets/images/camera.svg">
+        </div>
         <mat-card-title-group>
             <mat-card-title>Diana Wells</mat-card-title>
             <mat-card-subtitle>Living in Athens, Greece. I love black and white classics, chillout music and green tea.</mat-card-subtitle>
@@ -40,24 +63,67 @@
     </mat-card>
 
     <mat-card>
-        <img mat-card-avatar class="partner-image-avatar" src="../assets/images/partner4.jpg" alt="Christopher Pierce">
+        <div class="partner-image">
+            <img mat-card-avatar class="partner-image-avatar" src="../assets/images/partner4.jpg" alt="Christopher Pierce">
+            <img mat-card-sm-image class="partner-image-airplane" src="../assets/images/airplane.svg">
+        </div>
         <mat-card-title-group>
             <mat-card-title>Christopher Pierce</mat-card-title>
             <mat-card-subtitle>Star Wars fanatic. I have a persistent enthusiasm to create new things.</mat-card-subtitle>
         </mat-card-title-group>
     </mat-card>
+
+    <div class="partner-button"><button mat-button>See other partners</button></div>
 </div>
 
 <!-- Grid -->
 <div class="blocks">
     <div class="title-text">Discover holiday activity ideas</div>
+
+    <mat-grid-list cols="3" rowHeight="300px">
+        <mat-grid-tile colspan="1" rowspan="1">
+            <div class="block block-sports">
+                <div class="block-text">Sports</div>
+                <div class="shimmer"></div>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+            <div class="block block-wellness">
+                <div class="block-text">Wellness and Health</div>
+                <div class="shimmer"></div>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+            <div class="block block-expeditions">
+                <div class="block-text">Expeditions</div>
+                <div class="shimmer"></div>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile colspan="1" rowspan="1">
+        </mat-grid-tile>
+        <mat-grid-tile colspan="2" rowspan="1">
+        </mat-grid-tile>
+
+        <mat-grid-tile colspan="2" rowspan="1">
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+        </mat-grid-tile>
+    </mat-grid-list>
 </div>
 
 <!-- Footer -->
-<div class="footer">
-    <span>DREAMSHARE</span>
+<div class="footer flex-container"          
+        fxLayoutAlign="space-around stretch" 
+        fxLayout="row">
+    
+    <div class="flex-item" fxFlex="25">
+        <mat-nav-list>
+            <mat-list-item><span class="logo">DREAMSHARE</span></mat-list-item>
+        </mat-nav-list>
+    </div>
 
-    <div class="footer-col-1">
+    <div class="flex-item footer-col-1" fxFlex="25">
         <mat-nav-list>
             <mat-list-item><span class="footer-col-title">Company</span></mat-list-item>
             <mat-list-item>About</mat-list-item>
@@ -65,15 +131,18 @@
             <mat-list-item></mat-list-item>
         </mat-nav-list>
     </div>
-    <div class="footer-col-2">
+    <div class="flex-item footer-col-2" fxFlex="25">
         <mat-nav-list>
             <mat-list-item><span class="footer-col-title">Activities</span></mat-list-item>
             <mat-list-item>Sports</mat-list-item>
-            <mat-list-item></mat-list-item>
-            <mat-list-item></mat-list-item>
+            <mat-list-item>Wellness and Health</mat-list-item>
+            <mat-list-item>Expeditions</mat-list-item>
+            <mat-list-item>Games</mat-list-item>
+            <mat-list-item>Culture and Education</mat-list-item>
+            <mat-list-item class="footer-view-all">View all</mat-list-item>
         </mat-nav-list>
     </div>
-    <div class="footer-col-3">
+    <div class="flex-item footer-col-3" fxFlex="25">
         <mat-nav-list>
             <mat-list-item><span class="footer-col-title">Contact Us</span></mat-list-item>
             <mat-list-item>Tel: (000) 000-0000</mat-list-item>

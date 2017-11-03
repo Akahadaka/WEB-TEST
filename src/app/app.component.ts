@@ -9,7 +9,7 @@ import { Component, HostListener } from '@angular/core';
 export class AppComponent {
 
     headerImageRatio: number = 700/1440;
-    bgHeight: number = window.innerWidth * this.headerImageRatio;
+    backgroundHeight: number = window.innerWidth * this.headerImageRatio;
     toolbarAlpha: number = 0;
 
     /**
@@ -23,7 +23,10 @@ export class AppComponent {
      */
     @HostListener('window:resize', ['$event'])
     resizeHeaderHeight(event: any) {
-        this.bgHeight = event.target.innerWidth * this.headerImageRatio;
+        let bgHeight = event.target.innerWidth * this.headerImageRatio;
+        if (bgHeight > 270) {
+            this.backgroundHeight = bgHeight;
+        }
     }
 
     /**
@@ -33,9 +36,8 @@ export class AppComponent {
     colorToolbar(event: any) {
         let scrollTop = event.target.documentElement.scrollTop;
         
-        if (scrollTop < this.bgHeight) {
-            this.toolbarAlpha = scrollTop/this.bgHeight;
-            console.log(this.toolbarAlpha);
+        if (scrollTop < this.backgroundHeight) {
+            this.toolbarAlpha = scrollTop/this.backgroundHeight;
         }
     }
 
