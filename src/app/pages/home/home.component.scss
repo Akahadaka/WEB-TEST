@@ -152,7 +152,7 @@
  * Blocks
  */
 .blocks {
-    margin: 40px auto 50px;
+    margin: 40px 10% 50px;
 
     .shimmer {
         width: 400px;
@@ -237,7 +237,14 @@
 
 @media(max-width: 599px) {
     .blocks {
-        margin: 20px auto 30px;
+        margin: 20px 5% 30px;
+    }
+}
+
+@media(max-width: 321px) {
+
+    .blocks {
+        margin: 10px 0 20px;
     }
 }
 
