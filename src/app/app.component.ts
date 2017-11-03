@@ -10,7 +10,6 @@ export class AppComponent {
 
     headerImageRatio: number = 700/1440;
     backgroundHeight: number = window.innerWidth * this.headerImageRatio;
-    toolbarAlpha: number = 1;
 
     /**
      * 
@@ -25,21 +24,10 @@ export class AppComponent {
     @HostListener('window:resize', ['$event'])
     resizeHeaderHeight(event: any) {
         let bgHeight = event.target.innerWidth * this.headerImageRatio;
-        if (bgHeight > 270) {
+        //if (bgHeight > 270) {
             this.backgroundHeight = bgHeight;
-        }
+        //}
     }
 
-    /**
-     * Add toolbar background color when scrolling up
-     */
-    @HostListener('window:scroll', ['$event'])
-    colorToolbar(event: any) {
-        let scrollTop = event.target.documentElement.scrollTop;
-        
-        if (scrollTop < this.backgroundHeight) {
-            this.toolbarAlpha = scrollTop/this.backgroundHeight;
-        }
-    }
 
 }

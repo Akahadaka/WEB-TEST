@@ -1,0 +1,110 @@
+@import "~../../../assets/css/colors.scss";
+
+/**
+ * Toolbar
+ */
+.toolbar {
+
+    color: $color-image-text;
+
+    mat-toolbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        z-index: 99;
+    }
+
+    .toolbar-nav {
+        float: right;
+        font-size: 0.8em;
+    }
+
+    .toolbar-button button {
+        width: 100px;
+        border-radius: 20px;
+        border: 2px solid $color-image-text;
+        color: $color-image-text;
+        background-color: transparent;
+        font-size: 0.9em;
+        transition: color 0.5s ease-in-out;
+
+        &:hover {
+            background-color: $color-image-text;
+            color: $color-primary-dark;
+        }
+    }
+
+    .list-menu {
+        display: block;
+        font-size: 0.8em;
+
+        a {
+            padding: 0 10px;
+        }
+
+        a,
+        &:active,
+        &:hover,
+        &:focus,
+        &:visited {
+            color: $color-image-text;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+    .button-menu {
+        display: none;
+        padding: 0 10px;
+
+        button {
+            background-color: transparent;
+        }
+    }
+}
+
+::ng-deep {
+    .cdk-overlay-backdrop {
+        background-color: $color-primary-dark;
+    }
+
+    .mat-menu-panel {
+
+        background-color: $color-primary-dark;
+        border: 2px solid $color-primary-light;
+        border-radius: 10px !important;
+
+        button {
+            color: $color-primary-light;
+            background-color: $color-primary-dark;
+        }
+    }
+}
+
+@media(max-width: 666px) {
+    .toolbar .list-menu {
+        display: none;
+    }
+
+    .toolbar .button-menu {
+        display: block;
+    }
+
+    .toolbar .toolbar-button button {
+        height: 30px;
+        line-height: 24px;
+        font-size: 0.8em;
+    }
+}
+
+@media(max-width: 399px) {
+    .toolbar .toolbar-button button {
+        min-width: 60px;
+        width: 60px;
+        height: 25px;
+        line-height: 18px;
+        padding: 0;
+        font-size: 0.7em;
+    }
+}

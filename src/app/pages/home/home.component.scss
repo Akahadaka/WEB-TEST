@@ -1,0 +1,243 @@
+@import "~../../../assets/css/colors.scss";
+
+.title-text {
+    color: $color-primary-dark;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-align: center;
+    margin: 50px auto 20px;
+}
+
+/**
+ * Partners
+ */
+.partners {
+
+    margin: auto;
+
+    mat-card {
+        box-shadow: none;
+        text-align: center;
+        padding: 18px;
+        font-size: 0.8em;
+
+        mat-card-title-group {
+            display: block;
+        }
+
+        .partner-image {
+            position: relative;
+            //border: 1px solid red;
+            width: 100px;
+            margin: 0 auto;
+        }
+
+        .partner-image-avatar {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            filter: grayscale(100%);
+
+            &:hover {
+                filter: unset;
+            }
+        }
+
+        .partner-image-music,
+        .partner-image-brush,
+        .partner-image-camera,
+        .partner-image-airplane {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            padding: 5px;
+            border-radius: 50%;
+            border: 4px solid $color-image-text;
+            top: 80px;
+            right: -5px;
+        }
+
+        .partner-image-music {
+            background-color: $color-feature-music;
+        }
+
+        .partner-image-brush {
+            background-color: $color-feature-brush;
+        }
+
+        .partner-image-camera {
+            background-color: $color-feature-camera;
+        }
+
+        .partner-image-airplane {
+            background-color: $color-feature-airplane;
+        }
+
+        mat-card-title {
+            margin-top: 10px;
+            font-weight: 700;
+            font-size: 0.9em;
+        }
+
+        mat-card-subtitle {
+            font-size: 0.8em;
+            font-family: Roboto;
+            font-weight: 100;
+            color: $color-subtitle-text;
+        }
+
+    }
+
+}
+
+.partner-button {
+
+    width: 190px;
+    margin: auto;
+
+    button {
+        border-radius: 20px;
+        border: 2px solid $color-primary;
+        color: $color-primary;
+        background-color: transparent;
+        font-size: 0.85em;
+        padding: 0 30px;
+        transition: color 0.5s ease-in-out;
+
+        &:hover {
+            background-color: $color-primary;
+            color: $color-image-text;
+        }
+    }
+}
+
+@media(max-width: 599px) {
+    .partners mat-card {
+    
+        padding: 10px;
+        font-size: 1.2em;
+
+        .partner-image {
+            width: 60px;
+        }
+
+        .partner-image-avatar {
+            width: 60px;
+            height: 60px;
+        }
+
+        .partner-image-music,
+        .partner-image-brush,
+        .partner-image-camera,
+        .partner-image-airplane {
+            width: 10px;
+            height: 10px;
+            top: 50px;
+            right: -10px;
+            border-size: 3px;
+        }
+    }
+
+    .partner-button {
+        width: 150px;
+    }
+
+    .title-text {
+        margin-top: 30px;
+    }
+
+}
+
+/**
+ * Blocks
+ */
+.blocks {
+    margin: 40px auto 50px;
+
+    .shimmer {
+        width: 400px;
+        height: 1550px;
+        position: absolute;
+        top: -700px;
+        left: -850px;
+        transition: 0.4s;
+        transform: rotate(45deg);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0)50%, rgba(255, 255, 255, 0.1)100%);
+    }
+
+    .block {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center top;
+        color: $color-image-text;
+        border: 5px solid $color-image-text;
+        border-radius: 10px;
+        box-sizing: border-box;
+        cursor: pointer;
+
+        &:hover .shimmer {
+            top: 0px;
+            left: 0px;
+            transition: 0;
+            transform: rotate(45deg);
+        }
+    }
+
+    .block-text {
+        height: 24px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        text-align:center;
+        font-size: 1.1em;
+        font-weight: 700;
+    }
+
+    .block-sports {
+        background-image: url("../../../assets/images/block1Sports.jpg");
+        color: $color-primary-dark;
+    }
+
+    .block-wellness {
+        background-image: url("../../../assets/images/block2Wellness.jpg"), linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+        background-blend-mode: overlay;
+    }
+
+    .block-expeditions {
+        background-image: url("../../../assets/images/block3Expeditions.jpg"), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+        background-blend-mode: overlay;
+    }
+
+    .block-games {
+        background-image: url("../../../assets/images/block4Games.jpg"), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+        background-blend-mode: overlay;
+    }
+
+    .block-culture {
+        background-image: url("../../../assets/images/block5Culture.jpg"), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+        background-blend-mode: overlay;
+    }
+
+    .block-beauty {
+        background-image: url("../../../assets/images/block6Beauty.jpg"), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+        background-blend-mode: overlay;
+    }
+
+    .block-travelling {
+        background-image: url("../../../assets/images/block7Travelling.jpg"), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+        background-blend-mode: overlay;
+    }
+}
+
+@media(max-width: 599px) {
+    .blocks {
+        margin: 20px auto 30px;
+    }
+}
+

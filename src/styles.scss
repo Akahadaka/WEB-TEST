@@ -1,9 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/_theming.scss";
+
+// Include the base styles for Angular Material core. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+@include mat-core();
 
 /**
  * Fonts
  */
-@import url("~https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400,400i,500,700");
+@import url("~https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("~https://fonts.googleapis.com/css?family=Montserrat|Roboto:100,200,300,400,400i,500,700");
+
+/**
+ * Mixins 
+ */
+@mixin background-opacity($color, $opacity: 0) {
+    background: rgba($color, $opacity);
+}
+
+/**
+ * Common classes 
+ */
+.flex-stretch {
+    // This fills the remaining space, by using flexbox.
+    // Every toolbar row uses a flexbox row layout.
+    flex: 1 1 auto;
+}
 
 html, body {
     font-family: Montserrat, Roboto;
@@ -14,35 +36,30 @@ html, body {
 }
 
 /**
- * XL
+ * Media Queries
  */
+// XL
 @media(min-width: 961px) {
 
 }
 
-/**
- * LG
- */
+// LG
 @media(min-width: 901px) and (max-width: 960px) {
 }
 
-/**
- * MD
- */
+// MD
 @media(min-width: 667px) and (max-width: 799px) {
 
 }
 
-/**
- * SM
- */
+// SM
 @media(min-width: 400px) and (max-width: 666px) {
-
+    html, body {
+        font-size: 0.9em;
+    }
 }
 
-/**
- * XS 
- */
+// XS
 @media(max-width: 399px) {
 
     html, body {

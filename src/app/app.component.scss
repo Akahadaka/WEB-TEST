@@ -2,300 +2,117 @@
 
 $background-image: url("../assets/images/headerBackground.jpg");
 
-.toolbar {
+/**
+ * Header
+ */
+.header {
+
+    background-image: $background-image;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+    background-attachment: fixed;
 
     color: $color-image-text;
 
-    mat-toolbar {
-        position: fixed;
-        background-color: transparent;
-        z-index: 99;
+    .header-text-title {
+        font-size: 2.5em;
+        font-weight:700;
+        text-align: center;
     }
 
-    .toolbar-nav {
-        float: right;
-        font-size: 0.8em;
+    .header-text-subtitle {
+        display: block;
+        font-family: Roboto;
+        font-weight: 100;
+        margin: 20px 0;
+    }
 
-        .toolbar-button button {
-            width: 90px;
-            border-radius: 20px;
-            border: 2px solid $color-image-text;
-            color: $color-image-text;
-            background-color: transparent;
-            font-size: 1em;
-            transition: color 0.5s ease-in-out;
+
+    .header-button button {
+        width: 220px;
+        border-radius: 20px;
+        color: $color-image-text;
+        background-color: $color-primary;
+        font-size: 0.85em;
+        padding: 0 30px;
+        transition: color 0.5s ease-in-out;
+
+        &:hover {
+            background-color: $color-image-text;
+            color: $color-primary;
         }
     }
+
 }
 
-.header {
-
-    position: relative;
-    height: 100%;
-
-    .header-background {
-        height: 100%;
-        min-height: 270px;
-        background-image: $background-image;
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-        background-position: center top;
-        background-attachment: fixed;
-    }
-
-    .header-text {
-        width: 100%;
-        height: 190px;
-        position: absolute;
-        margin: auto;
-        top: 0;
-        bottom: 0;
-        text-align: center;
-        color: $color-image-text;
+@media(max-width: 666px) {
+    .header {
+        font-size: 0.7em;
 
         .header-text-title {
-            font-size: 2.5em;
-            font-weight:700;
+            margin-top: 20px;
         }
 
         .header-text-subtitle {
-            display: block;
-            font-size: 0.8em;
-            font-weight: lighter;
-            margin: 20px 0;
+            margin: 10px 0;
+            font-size: 1.05em;
         }
 
         .header-button button {
-            width: 220px;
-            border-radius: 20px;
-            color: $color-image-text;
-            background-color: $color-primary;
-            font-size: 0.85em;
-            padding: 0 30px;
-            transition: color 0.5s ease-in-out;
-
-            &:hover {
-                background-color: $color-image-text;
-                color: $color-primary;
-            }
-        }
-
-    }
-
-}
-
-.title-text {
-    color: $color-title-text;
-    font-size: 1.3em;
-    font-weight: 700;
-    text-align: center;
-    margin: 50px auto 20px;
-}
-
-.partners {
-
-    clear: both;
-    width: 90%;
-    margin: auto;
-
-    mat-card {
-        float:left;
-        width: 20%;
-        height: 200px;
-        box-shadow: none;
-        text-align: center;
-        padding: 18px;
-        font-size: 0.8em;
-
-        mat-card-title-group {
-            display: block;
-        }
-
-        .partner-image {
-            position: relative;
-            //border: 1px solid red;
-            width: 100px;
-            margin: 0 auto;
-        }
-
-        .partner-image-avatar {
-            width: 100px;
-            height: 100px;
-            cursor: pointer;
-            filter: grayscale(100%);
-
-            &:hover {
-                filter: unset;
-            }
-        }
-
-        .partner-image-music,
-        .partner-image-brush,
-        .partner-image-camera,
-        .partner-image-airplane {
-            position: absolute;
-            width: 18px;
-            height: 18px;
-            padding: 5px;
-            border-radius: 50%;
-            border: 4px solid $color-image-text;
-            top: 80px;
-            right: -5px;
-        }
-
-        .partner-image-music {
-            background-color: $color-feature-music;
-        }
-
-        .partner-image-brush {
-            background-color: $color-feature-brush;
-        }
-
-        .partner-image-camera {
-            background-color: $color-feature-camera;
-        }
-
-        .partner-image-airplane {
-            background-color: $color-feature-airplane;
-        }
-
-        mat-card-title {
-            margin-top: 10px;
-            font-weight: 700;
-        }
-
-        mat-card-subtitle {
-            font-size: 0.8em;
-            color: $color-subtitle-text;
-        }
-
-    }
-
-    .partner-button {
-
-        clear: both;
-        width: 190px;
-        margin: auto;
-
-        button {
-            border-radius: 20px;
-            border: 2px solid $color-primary;
-            color: $color-primary;
-            background-color: transparent;
-            font-size: 0.85em;
-            padding: 0 30px;
-            transition: color 0.5s ease-in-out;
-
-            &:hover {
-                background-color: $color-primary;
-                color: $color-image-text;
-            }
+            width: 180px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 1.1em;
         }
     }
 }
 
-.blocks {
-    clear: both;
-    width: 90%;
-    margin: auto;
+@media(max-width: 399px) {
+    .header {
+        .header-text-title {
+            margin-top: 40px;
+        }
+        
+        .header-text-subtitle {
+            margin: 5px 0;
+        }
 
-    .shimmer {
-        width: 400px;
-        height: 1300px;
-        position: absolute;
-        top: -400px;
-        left: -600px;
-        transition: 0.2s;
-        transform: rotate(30deg);
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0)50%, rgba(255, 255, 255, 0.7)100%);
-    }
-
-    .block {
-        position: relative;
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-        border-radius: 4px;
-        background-repeat: no-repeat;
-        //background-size: 105% auto;
-        background-position: center top;
-        //background-color: $color-primary-light;
-        color: $color-image-text;
-        margin: 10px;
-        //transition: all 1000ms cubic-bezier(0.005, 1.650, 1.000, -0.600);
-        //transition-timing-function: cubic-bezier(0.005, 1.650, 1.000, -0.600);
-        cursor: pointer;
-        top: calc(top + 10px);
-
-        &:hover .shimmer {
-            top: 0px;
-            left: 0px;
-            transform: rotate(45deg);
+        .header-button button {
+            width: 125px;
+            height: 25px;
+            line-height: 15px;
+            padding: 5px 10px;
         }
     }
+}
 
-    .block-text {
-        height: 24px;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        text-align:center;
-        font-size: 1.3em;
-        font-weight: 700;
-    }
-
-    .block-sports {
-        background-image: url("../assets/images/block1Sports.jpg");
-        color: $color-title-text;
-    }
-
-    .block-wellness {
-        background-image: url("../assets/images/block2Wellness.jpg"), linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
-        background-blend-mode: overlay;
-    }
-
-    .block-expeditions {
-        background-image: url("../assets/images/block3Expeditions.jpg"), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
-        background-blend-mode: overlay;
-    }
-
-    .block-games {
-        background-image: url("../assets/images/block4Games.jpg"), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
-        background-blend-mode: overlay;
-    }
-
-    .block-culture {
-        background-image: url("../assets/images/block5Culture.jpg"), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
-        background-blend-mode: overlay;
-    }
-
-    .block-beauty {
-        background-image: url("../assets/images/block6Beauty.jpg"), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
-        background-blend-mode: overlay;
-    }
-
-    .block-travelling {
-        background-image: url("../assets/images/block7Travelling.jpg"), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
-        background-blend-mode: overlay;
-    }
+/**
+ * Footer
+ */
+.footer-wrapper {
+    border-top: 2px solid $color-primary;
 }
 
 .footer {
 
-    font-size: 0.8em;
+    font-size: 0.7em;
+    font-family: Roboto;
+    font-weight: 100;
     color: $color-subtitle-text;
-    font-weight: 300;
-    border-top: 2px solid $color-primary;
+    margin: auto;
 
     .logo {
         color: $color-primary;
+        margin-top: 20px;
+        display: block;
+        font-family: Montserrat;
     }
 
     .footer-col-title {
         color: $color-primary-dark;
         font-weight: 700;
+        font-family: Montserrat;
     }
 
     mat-list-item {
@@ -307,51 +124,22 @@ $background-image: url("../assets/images/headerBackground.jpg");
     }
 }
 
-/**
- * XL
- */
-@media(min-width: 961px) {
-
-}
-
-/**
- * LG
- */
-@media(min-width: 901px) and (max-width: 960px) {
-}
-
-/**
- * MD
- */
-@media(min-width: 667px) and (max-width: 799px) {
-
-   .partners mat-card {
-        width: 44%
-   }
-}
-
-/**
- * SM
- */
-@media(min-width: 400px) and (max-width: 666px) {
-
-   .partners mat-card {
-        width: 40%
-   }
-}
-
-/**
- * XS 
- */
-@media(max-width: 399px) {
-
-    html, body {
-        font-size: 0.8em;
+@media(max-width: 599px) {
+    .footer {
+        font-size: 1.2em;
     }
-
-   .partners mat-card {
-        width: 88%
-   }
 }
+
+/**
+ * Testing
+ *//*
+ .flex-container {
+
+ border: 4px solid yellow;
+ .flex-item {
+ border: 1px dashed red;
+ }
+ }
+    */
 
 
