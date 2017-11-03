@@ -1,6 +1,7 @@
 @import "~../assets/css/colors.scss";
 
 $background-image: url("../assets/images/headerBackground.jpg");
+$github-corner-image: url('../assets/images/githubCorner.png');
 
 /**
  * Header
@@ -127,6 +128,31 @@ $background-image: url("../assets/images/headerBackground.jpg");
 @media(max-width: 599px) {
     .footer {
         font-size: 1.2em;
+    }
+}
+
+/**
+ * GitHub
+ */
+.github-corner {
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+
+    background-image: $github-corner-image;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: left top;
+
+}
+
+@media(max-width: 599px) {
+    .github-corner {
+        width: 60px;
+        height: 60px;
     }
 }
 
